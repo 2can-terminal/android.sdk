@@ -62,6 +62,7 @@
     <string name="history_tr_details_dlg_lbl_paytype">Способ оплаты:</string>
     <string name="history_tr_details_dlg_lbl_pan">Номер карты:</string>
     <string name="history_tr_details_dlg_lbl_state">Статус:</string>
+    <string name="history_tr_details_dlg_lbl_fiscal_status">Фискальный статус:</string>
     <string name="history_tr_details_dlg_lbl_invoice">Номер чека:</string>
     <string name="history_tr_details_dlg_lbl_geodata">Координаты:</string>
     <string name="history_tr_details_dlg_lbl_signature_url">Подпись:</string>
@@ -139,6 +140,12 @@
     <string name="fiscal_dlg_lbl_doc">Номер документа</string>
     <string name="fiscal_dlg_lbl_cvc">КПК</string>
     <string name="fiscal_dlg_lbl_shift">Номер смены</string>
+    <string-array name="fiscal_states">
+        <item>Не установлен</item>
+        <item>Фискализируется</item>
+        <item>Фискализирована</item>
+        <item>Ошибка фискализации</item>
+    </string-array>
 
     <string name="linked_dlg_title">Выберите карту</string>
     <string name="linked_dlg_empty">Нет привязанных карт</string>

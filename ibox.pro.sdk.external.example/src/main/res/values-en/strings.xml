@@ -48,6 +48,7 @@
     <string name="history_tr_details_dlg_lbl_photo_url">Attached image:</string>
     <string name="history_tr_details_dlg_lbl_signature_url">Signature:</string>
     <string name="history_tr_details_dlg_lbl_state">State:</string>
+    <string name="history_tr_details_dlg_lbl_fiscal_status">Fiscal status:</string>
     <string name="history_tr_details_dlg_lbl_title">Description:</string>
     <string name="login_dlg_btn_ok">Login</string>
     <string name="login_dlg_lbl_login">Login</string>
