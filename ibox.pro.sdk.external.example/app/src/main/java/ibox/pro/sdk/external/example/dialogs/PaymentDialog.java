@@ -18,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Hashtable;
@@ -112,7 +114,10 @@ public class PaymentDialog extends Dialog implements PaymentControllerListener {
 	}
 
 	protected int getReadyStringID() {
-		return PaymentController.getInstance().getReaderType().isMultiInputSupported()
+		boolean nfcAllowed = mPaymentContext.getCurrency() == PaymentController.Currency.RUB
+				&& PaymentController.NFC_LIMIT.compareTo(BigDecimal.valueOf(mPaymentContext.getAmount()).setScale(PaymentController.Currency.RUB.getE(), RoundingMode.HALF_UP)) > 0;
+
+		return PaymentController.getInstance().getReaderType().isMultiInputSupported() && nfcAllowed
 					? R.string.reader_state_ready_multiinput
 					: mPaymentContext.getNFC() ? R.string.reader_state_ready_nfconly : R.string.reader_state_ready;
 	}
